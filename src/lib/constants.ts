@@ -1,5 +1,5 @@
 // API Configuration
-export const API_URL = 'http://localhost:5555/books';
+export const API_URL = 'https://bookstore-backend-1-ccbv.onrender.com';
 export const USE_MOCK_DATA = false;
 
 // Gemini API Configuration
