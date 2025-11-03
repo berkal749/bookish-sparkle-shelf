@@ -22,7 +22,7 @@ const CreateBook = ({ onClose }: CreateBookProps) => {
     
     const request = USE_MOCK_DATA
       ? new Promise(res => setTimeout(() => res({}), 500))
-      : axios.post(API_URL, data);
+      : axios.post(`${API_URL}/change`, data);
 
     request
       .then(() => {
