@@ -123,3 +123,9 @@ const Index = () => {
 };
 
 export default Index;
+
+const allowedOrigins = [
+  "http://localhost:5173",                   // for local dev
+  "http://localhost:8080",                   // <-- add this (vite default in your config)
+  "https://cute-kleicha-f8773a.netlify.app"  // your deployed frontend
+];
