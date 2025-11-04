@@ -3,7 +3,7 @@ export const API_URL = 'https://bookstore-backend-1-ccbv.onrender.com/books';
 export const USE_MOCK_DATA = false;
 
 // Gemini API Configuration
-export const GEMINI_API_KEY = "";
+export const GEMINI_API_KEY = "AIzaSyCkpscK3hXZLYQVBNmc-U8jFRAUOv5lNIw";
 export const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
 
 // Mock data for testing
