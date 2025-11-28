@@ -1,4 +1,5 @@
 import { LayoutGrid, List, Plus } from 'lucide-react';
+import UserButton from './UserButton';
 
 interface HeaderProps {
   viewType: 'card' | 'table';
@@ -35,6 +36,7 @@ const Header = ({ viewType, setViewType, onShowCreate }: HeaderProps) => (
         <Plus size={24} />
         <span className="hidden sm:block font-medium">Create Book</span>
       </button>
+      <UserButton />
     </div>
   </header>
 );
