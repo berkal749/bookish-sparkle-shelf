@@ -1,3 +1,2 @@
 // Clerk Configuration
-// Replace with your actual Clerk publishable key
-export const CLERK_PUBLISHABLE_KEY = "pk_test_YOUR_KEY_HERE";
+export const CLERK_PUBLISHABLE_KEY = "pk_test_Zmlyc3QtbXVzdGFuZy03OC5jbGVyay5hY2NvdW50cy5kZXYk";

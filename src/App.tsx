@@ -12,8 +12,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
-if (!CLERK_PUBLISHABLE_KEY || CLERK_PUBLISHABLE_KEY === "pk_test_YOUR_KEY_HERE") {
-  console.warn("Missing or invalid Clerk Publishable Key. Please update src/lib/clerk.ts");
+if (!CLERK_PUBLISHABLE_KEY) {
+  console.warn("Missing Clerk Publishable Key. Please update src/lib/clerk.ts");
 }
 
 const App = () => (
