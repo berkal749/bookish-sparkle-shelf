@@ -84,12 +84,12 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex">
+    <div className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" reverseOrder={false} />
       
       <Sidebar />
 
-      <div className="flex-1 p-4 md:p-8">
+      <div className="p-4 md:p-8">
         <Header
           viewType={viewType}
           setViewType={setViewType}
