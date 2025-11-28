@@ -10,8 +10,9 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: 'My Book Shelf', icon: <BookOpen className="w-5 h-5" />, active: true },
-  { label: 'Book Store', icon: <Store className="w-5 h-5" /> },
+  { label: 'Book Store', icon: <Store className="w-5 h-5" />, locked: true },
   { label: 'Trending', icon: <TrendingUp className="w-5 h-5" />, locked: true },
+  { label: 'Communities', icon: <Users className="w-5 h-5" />, locked: true },
   { label: 'Friends', icon: <Users className="w-5 h-5" />, locked: true },
 ];
 
