@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Toaster, toast } from 'react-hot-toast';
 import Header from '@/components/Header';
+import Sidebar from '@/components/Sidebar';
 import BookCard from '@/components/BookCard';
 import BookTable from '@/components/BookTable';
 import Spinner from '@/components/Spinner';
@@ -83,41 +84,45 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
+    <div className="min-h-screen bg-background text-foreground flex">
       <Toaster position="top-center" reverseOrder={false} />
+      
+      <Sidebar />
 
-      <Header
-        viewType={viewType}
-        setViewType={setViewType}
-        onShowCreate={() => openModal('create')}
-      />
+      <div className="flex-1 p-4 md:p-8">
+        <Header
+          viewType={viewType}
+          setViewType={setViewType}
+          onShowCreate={() => openModal('create')}
+        />
 
-      <main>
-        {loading ? (
-          <Spinner />
-        ) : viewType === 'card' ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {books.map((book) => (
-              <BookCard
-                key={book._id}
-                book={book}
-                onShowRead={() => openModal('read', book._id)}
-                onShowEdit={() => openModal('edit', book._id)}
-                onShowDelete={() => openModal('delete', book._id)}
-              />
-            ))}
-          </div>
-        ) : (
-          <BookTable
-            books={books}
-            onShowRead={(bookId) => openModal('read', bookId)}
-            onShowEdit={(bookId) => openModal('edit', bookId)}
-            onShowDelete={(bookId) => openModal('delete', bookId)}
-          />
-        )}
-      </main>
+        <main>
+          {loading ? (
+            <Spinner />
+          ) : viewType === 'card' ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {books.map((book) => (
+                <BookCard
+                  key={book._id}
+                  book={book}
+                  onShowRead={() => openModal('read', book._id)}
+                  onShowEdit={() => openModal('edit', book._id)}
+                  onShowDelete={() => openModal('delete', book._id)}
+                />
+              ))}
+            </div>
+          ) : (
+            <BookTable
+              books={books}
+              onShowRead={(bookId) => openModal('read', bookId)}
+              onShowEdit={(bookId) => openModal('edit', bookId)}
+              onShowDelete={(bookId) => openModal('delete', bookId)}
+            />
+          )}
+        </main>
 
-      {renderModalContent()}
+        {renderModalContent()}
+      </div>
     </div>
   );
 };

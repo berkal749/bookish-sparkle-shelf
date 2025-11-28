@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ viewType, setViewType, onShowCreate }: HeaderProps) => (
   <header className="flex justify-between items-center mb-8">
-    <h1 className="text-4xl font-bold text-foreground">Book Store</h1>
+    <h1 className="text-4xl font-bold text-foreground">Book Shelf</h1>
     <div className="flex items-center gap-4">
       <div className="flex gap-2 p-1 bg-muted rounded-lg">
         <button
